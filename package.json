@@ -1,0 +1,22 @@
+{
+  "name": "portfolio-website",
+  "version": "1.0.0",
+  "description": "Evan Hecht's porfolio website",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "sirv public",
+    "dev": "rollup -c -w"
+  },
+  "author": "Evan Hecht",
+  "license": "ISC",
+  "dependencies": {
+    "svelte": "^3.46.4"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^13.1.3",
+    "rollup": "^2.68.0",
+    "rollup-plugin-livereload": "^2.0.5",
+    "rollup-plugin-svelte": "^7.1.0",
+    "sirv-cli": "^2.0.2"
+  }
+}
