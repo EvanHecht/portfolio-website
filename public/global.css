@@ -1,3 +1,9 @@
+:root {
+    --palette-color-1: #212121;
+    --palette-color-2: white;
+    --palette-color-3: #2B393B;
+  }
+
 @font-face {
     font-family: 'Rubik';
     src: url('resources/fonts/Rubik-Light.woff2') format('woff2'),
@@ -7,3 +13,8 @@
     font-display: swap;
 }
 
+body {
+    background-color: var(--palette-color-1);
+    margin: 0;
+    height: 10000px;
+}
