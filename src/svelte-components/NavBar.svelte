@@ -20,6 +20,7 @@
     #container {
         width: 100%;
         position: fixed;
+        z-index: 10;
     }
     ul {
         list-style-type: none;
@@ -52,7 +53,7 @@
 
     }
     a:hover {
-        background-color: #5CDB95;
+        background-color: var(--palette-color-4);
         color: var(--palette-color-1);
         transform: translateX(-1rem);
     }
