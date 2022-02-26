@@ -17,38 +17,32 @@
     let paths_list = []
     if(typeof image_paths != "undefined") {
         paths_list = image_paths.split(" ")
-        
-    }
-
-    let resizeCard = function() {
-        let new_size = container.clientHeight//container.clientHeight
-        image_area.style.maxWidth = (new_size).toString() + 'px'
-
     }
 
     onMount(async () => {
-
-        resizeCard();
+        console.log(paths_list)
+        if(paths_list.length == 0) { 
+            text_area.style.gridColumnStart = '1'
+            header_ref.style.gridColumnStart = '1'
+            text_area.style.textAlign = 'center'
+            console.log("bruh")
+        }
 
         // Add images
+        let i = 1
         paths_list.forEach(element => {
                 
                 // If there is at least 1 image, resize the image area
-                container.style.background_color = "blue"
-                container.style.gap = "0 1rem";
-                console.log(container)
                 let img = document.createElement('img')
                 img.src = element
                 img.classList.add('image')
+                if(i < paths_list.length) img.style.marginBottom = '1rem'
                 image_area.appendChild(img)
+                i++
             });
         
 
     });
-
-    window.onresize = function() {
-        resizeCard()
-    }
 
     function ShouldReveal(element) {
         const rect = element.getBoundingClientRect()
@@ -73,10 +67,11 @@
 
     #container {
         display: grid;
-        grid-template-rows: auto 1fr;
-        grid-template-columns: auto 1fr;
-        gap: 1rem 1rem;
+        grid-template-rows: fit-content(6rem) auto;
+        grid-template-columns: fit-content(25%) fit-content(75%);
         background-color: var(--palette-color-2);
+        gap: 1rem;
+        padding: 1rem;
         width: 80%;
         margin: 0 10% 8rem 10%;
         border-radius: 3rem;
@@ -89,7 +84,6 @@
         border-width: .5rem;
         border-color: var(--palette-color-4);
         font-size: 100%;
-        padding: 1rem;
         overflow: hidden;
     }
 
@@ -102,10 +96,9 @@
         height: fit-content;
         overflow: hidden;
         font-family: "Secular One";
-        text-align: left;
+        text-align: center;
         font-size: 500%;
         margin: 0;
-        padding: 0 0 0 1rem;
         color: var(--palette-color-1);
         font-weight: lighter;
     }
@@ -115,7 +108,7 @@
         grid-row-end: 3;
         grid-column-start: 1;
         grid-column-end: 2;
-        margin: auto;
+        width: 100%;
     }
 
     #text_area {
@@ -124,16 +117,13 @@
         grid-column-start: 2;
         grid-column-end: 3;
         font-family: "Rubik";
-        height: fit-content;
-        max-height: fit-content;
         text-align: left;
         width: 100%;
         font-size: 2.4rem;
         color: var(--palette-color-1);
         line-height: 3.25rem;
-        vertical-align: top;
         margin: 0;
-        padding: 0rem 1rem;
+        vertical-align: top;
     }
 
 </style>
@@ -141,5 +131,5 @@
 <div id=container bind:this={container}>
     <h1 id=header style="color: {header_color}" bind:this={header_ref}> {header} </h1>
         <div id=image_area bind:this={image_area}> </div>
-        <div id=text_area bind:this={text_area}> {@html text} </div>
+        <div id=text_area bind:this={text_area}> {@html text}</div>
 </div>
