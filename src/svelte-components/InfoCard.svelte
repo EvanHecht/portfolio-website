@@ -1,117 +1,145 @@
 <script>
 
+    import { onMount } from 'svelte';
+
     // Props
-    export let image_path;
-    
-    
-    export let header;
-    export let header_color;
-    export let text;
+    export let image_paths
+    export let header
+    export let header_color
+    export let text
 
+    let container
+    let header_ref
+    let image_area
+    let text_area
+    
 
-    let container;
+    let paths_list = []
+    if(typeof image_paths != "undefined") {
+        paths_list = image_paths.split(" ")
+        
+    }
+
+    let resizeCard = function() {
+        let new_size = container.clientHeight//container.clientHeight
+        image_area.style.maxWidth = (new_size).toString() + 'px'
+
+    }
+
+    onMount(async () => {
+
+        resizeCard();
+
+        // Add images
+        paths_list.forEach(element => {
+                
+                // If there is at least 1 image, resize the image area
+                container.style.background_color = "blue"
+                container.style.gap = "0 1rem";
+                console.log(container)
+                let img = document.createElement('img')
+                img.src = element
+                img.classList.add('image')
+                image_area.appendChild(img)
+            });
+        
+
+    });
+
+    window.onresize = function() {
+        resizeCard()
+    }
 
     function ShouldReveal(element) {
-        const rect = element.getBoundingClientRect();
+        const rect = element.getBoundingClientRect()
         return (
             rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
-        );
+        )
     }
 
     document.addEventListener('scroll', function(e) {
         if(ShouldReveal(container)) {
             container.style.opacity = '100%'
-            container.style.transform = 'translateX(0rem)';
+            container.style.transform = 'translateX(0rem)'
         } else {
         container.style.opacity = '0%'
-        container.style.transform = 'translateX(-10rem)';
+        container.style.transform = 'translateX(-10rem)'
         }
-    });
+    })
 
 </script>
 
 <style>
 
     #container {
-        display: flex;
+        display: grid;
+        grid-template-rows: auto 1fr;
+        grid-template-columns: auto 1fr;
+        gap: 1rem 1rem;
         background-color: var(--palette-color-2);
-        height: fit-content;
         width: 80%;
         margin: 0 10% 8rem 10%;
         border-radius: 3rem;
         opacity: 0%;
         transform: translateX(-10rem);
         transition: 0.75s;
-        padding: 1%;
         box-shadow: 0 1.5rem 1rem #000000c0;
         border-style:outset;
         border-radius: 3rem;
-        border-width: .75rem;
+        border-width: .5rem;
         border-color: var(--palette-color-4);
-    }
-
-    #image {
-        display: inline-block;
-        height: 100%;
-        border-radius: 3rem;
-
-    }
-
-    #text_area {
-        flex-grow: 100;
-        padding: 0;
-        margin: 0 3rem;
-        float: right;
-        font-family: "Rubik";
-        width: auto;
-
+        font-size: 100%;
+        padding: 1rem;
+        overflow: hidden;
     }
 
     #header {
-        text-align: center;
-        float: right;
-        width: 100%;
-        font-size: 5rem;
-        margin: 0 0 2rem 0;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        min-width: 100%;
+        height: fit-content;
+        overflow: hidden;
+        font-family: "Secular One";
+        text-align: left;
+        font-size: 500%;
+        margin: 0;
+        padding: 0 0 0 1rem;
         color: var(--palette-color-1);
+        font-weight: lighter;
     }
 
-    #text {
+    #image_area {
+        grid-row-start: 1;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        margin: auto;
+    }
+
+    #text_area {
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        font-family: "Rubik";
+        height: fit-content;
+        max-height: fit-content;
         text-align: left;
-        float: right;
-        margin: 0;
+        width: 100%;
         font-size: 2.4rem;
         color: var(--palette-color-1);
         line-height: 3.25rem;
-    }
-
-    a {
-        color: var(--palette-color-2);
-        display: inline-block;
-        font-size: x-large;
-        font-family: 'Rubik';
-        text-decoration: none;
-        height: 100%;
-        padding: 0 1rem;
-        border-radius: 1rem;
-        border: 1rem;
-        transition: 0.5s;
-        opacity: 1;
-
-    }
-
-    a:hover {
-        background-color: var(--palette-color-4);
-        color: var(--palette-color-1);
-        transform: translateX(-1rem);
+        vertical-align: top;
+        margin: 0;
+        padding: 0rem 1rem;
     }
 
 </style>
 
 <div id=container bind:this={container}>
-    <img id=image src={image_path} alt="card visual"/>
-    <div id=text_area>
-        <h1 id=header style="color: {header_color}"> {header} </h1>
-        <p id=text> {@html text} </p>
-    </div>
+    <h1 id=header style="color: {header_color}" bind:this={header_ref}> {header} </h1>
+        <div id=image_area bind:this={image_area}> </div>
+        <div id=text_area bind:this={text_area}> {@html text} </div>
 </div>

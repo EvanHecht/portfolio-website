@@ -14,8 +14,26 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Secular One';
+    src: url('resources/fonts/SecularOne-Regular.woff2') format('woff2'),
+        url('resources/fonts/SecularOne-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
 body {
     background-color: var(--palette-color-1);
     margin: 0;
     height: 10000px;
+}
+
+.image {
+    border-radius: 3rem;
+    min-width: 0px;
+    min-height: 0px;
+    width: 100%;
+    margin: 1rem 0;
 }
