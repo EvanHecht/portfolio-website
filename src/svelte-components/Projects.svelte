@@ -19,9 +19,9 @@
     h1 {
         text-align: center;
         font-family: 'Secular One';
-        font-size: 5rem;
+        font-size: 3.5rem;
         color: var(--palette-color-2);
-        text-shadow: 0.5rem 0.5rem black;
+        text-shadow: 0.35rem 0.35rem black;
         margin-bottom: 7rem;
         animation: forwards intro_animation .5s
     }

@@ -71,7 +71,7 @@
         color: silver;
         font-family: "Rubik";
         font-weight: 1;
-        font-size: 80px;
+        font-size: 3.5rem;
         margin: 8rem 0 0 0;
         opacity: 0;
         animation: appear-from-top 1s .5s forwards;
@@ -82,7 +82,7 @@
         color: grey;
         font-family: "Rubik";
         font-weight: 1;
-        font-size: 40px;
+        font-size: 2.5rem;
         margin: 0 0 2rem;
         opacity: 0;
         animation: appear-from-bottom 1s 1.5s forwards;
@@ -90,7 +90,7 @@
     }
 
     #arrow {
-        width: 3%;
+        width: 2.5%;
         image-rendering: crisp-edges;
         margin: 3rem 48.5%;
         opacity: 0;

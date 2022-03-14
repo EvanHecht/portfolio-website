@@ -5,7 +5,8 @@
   "main": "src/main.js",
   "scripts": {
     "start": "sirv public",
-    "dev": "rollup -c -w"
+    "dev": "rollup -c -w",
+    "build": "rollup -c"
   },
   "author": "Evan Hecht",
   "license": "ISC",

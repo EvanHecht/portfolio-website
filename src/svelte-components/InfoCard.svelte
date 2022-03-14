@@ -97,7 +97,7 @@
         overflow: hidden;
         font-family: "Secular One";
         text-align: center;
-        font-size: 500%;
+        font-size: 4rem;
         margin: 0;
         color: var(--palette-color-2);
         font-weight: lighter;
@@ -120,11 +120,12 @@
         font-family: "Rubik";
         text-align: left;
         width: 100%;
-        font-size: 2.4rem;
+        font-size: 1.75rem;
         color: var(--palette-color-2);
         line-height: 3.25rem;
         margin: 0;
         vertical-align: top;
+        line-height: 2.25rem;
     }
 
 </style>

@@ -64,6 +64,7 @@
         position: fixed;
         z-index: 10;
         transition: .5s;
+        height: fit-content;
     }
     ul {
         list-style-type: none;
@@ -72,19 +73,21 @@
         height: 4rem;
         line-height: 4rem;
         padding: 0.5rem 0 0.5rem 0;
+        margin: auto;
+
     }
     li {
         display: inline-block;
         height: 100%;
         padding: 0rem 1rem;
         opacity: 0;
-
+        margin: auto;
     }
 
     a {
         color: var(--palette-color-2);
         display: inline-block;
-        font-size: x-large;
+        font-size: large;
         font-family: 'Rubik';
         text-decoration: none;
         height: 100%;
@@ -102,8 +105,9 @@
     }
     
     img {
-        display: inline-block;
-        height: 100%;
+        display: block;
+        max-height: 70%;
+        margin-top: 7.5%;
     }
 
     #logo {

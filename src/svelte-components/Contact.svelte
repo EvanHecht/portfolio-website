@@ -19,7 +19,7 @@
     h1 {
         text-align: center;
         font-family: 'Secular One';
-        font-size: 5rem;
+        font-size: 3.5rem;
         color: var(--palette-color-2);
         text-shadow: 0.5rem 0.5rem black;
         margin-bottom: 7rem;
@@ -29,7 +29,7 @@
     h2 {
         text-align: center;
         font-family: 'Rubik';
-        font-size: 3rem;
+        font-size: 2rem;
         color: var(--palette-color-2);
         text-shadow: 0.5rem 0.5rem black;
         margin-bottom: 5rem;
@@ -48,7 +48,7 @@
     }
 
     h3 {
-        font-size: 3rem;
+        font-size: 2rem;
         text-align: center;
         color: var(--palette-color-2);
         font-family: 'Rubik';

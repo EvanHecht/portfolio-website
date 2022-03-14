@@ -41,7 +41,7 @@
         margin: 0;
         display: grid;
         grid-template-columns: auto;
-        grid-template-rows: 1fr 2fr 2fr 1fr;
+        grid-template-rows: .25fr 2fr fit-content 1.25fr;
         border-radius: 3rem 3rem;
         padding: 2.5%;
         box-shadow: 0 1.5rem 1rem;
@@ -59,7 +59,7 @@
         font-family: 'Rubik';
         color: var(--palette-color-2);
         font-weight: bold;
-        font-size: 3.25rem;
+        font-size: 2rem;
         grid-row: 1;
         margin: auto;
     }
@@ -82,8 +82,9 @@
         text-align: center;
         font-family: 'Rubik';
         color: var(--palette-color-2);
-        font-size: 1.7rem;
+        font-size: 1.5rem;
         margin: auto;
+        line-height: 2rem;
 
     }
 
@@ -95,7 +96,7 @@
         margin: auto;
         border-radius: 2rem;
         background-color: var(--palette-color-4);
-        font-size: 2rem;
+        font-size: 1.5rem;
         font-family: 'Rubik';
         transition: .35s;
         border-style:solid;
@@ -105,9 +106,8 @@
     #Button:hover {
         color: var(--palette-color-2);
         border-style:solid;
-        border-width: 1rem;
         border-color: var(--palette-color-3);
-        width: 70%;
+        width: 80%;
         cursor: pointer;
     }
 
