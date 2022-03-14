@@ -1,4 +1,46 @@
 <script>
+    import {current_page} from "../stores.js"
+    import {onMount} from "svelte"
+    import HomePage from "./HomePage.svelte"
+    import ProjectsPage from "./Projects.svelte"
+    import ContactPage from "./Contact.svelte"
+
+    onMount(async () => {
+        document.getElementById("HomeLink").onclick = ()=> {
+            window.scrollTo(0, 0)
+            current_page.set(HomePage)  
+            return false
+        }
+
+        document.getElementById("ProjectsLink").onclick = ()=> {
+            window.scrollTo(0, 0)
+            current_page.set(ProjectsPage)
+            return false
+        }
+
+
+        document.getElementById("ContactLink").onclick = ()=> {
+            window.scrollTo(0, 0)
+            current_page.set(ContactPage)
+            return false
+        }
+
+    })
+
+
+    document.addEventListener('scroll', function(e) {
+        console.log(window.scrollY)
+        if (window.scrollY > 0) {
+            document.getElementById("container").style.backgroundColor = "var(--palette-color-3)"
+        }
+
+        else if (window.scrollY == 0) {
+            document.getElementById("container").style.backgroundColor = "transparent"
+        }
+
+    });
+    
+
 </script>
 
 <style>
@@ -21,6 +63,7 @@
         width: 100%;
         position: fixed;
         z-index: 10;
+        transition: .5s;
     }
     ul {
         list-style-type: none;
@@ -85,10 +128,10 @@
 
 <div id=container>
 <ul>
-    <li id=logo><img src="resources/images/greeb_games_logo.png" alt="Greeb Games logo"></li>
-    <li id=link_1><a href="dfd">HOME</a></li>
-    <li id=link_2><a href="dfd">PROJECTS</a></li>
-    <li id=link_3><a href="dfd">ABOUT</a></li>
+    <li id=logo><img src="resources/images/EvanHecht.png" alt="Greeb Games logo"></li>
+    <li id=link_1><a id="HomeLink" href="#">HOME</a></li>
+    <li id=link_2><a id="ProjectsLink" href="#">PROJECTS</a></li>
+    <li id=link_3><a id="ContactLink" href="#">CONTACT</a></li>
 </ul>
 </div>
 

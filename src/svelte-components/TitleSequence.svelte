@@ -74,7 +74,7 @@
         font-size: 80px;
         margin: 8rem 0 0 0;
         opacity: 0;
-        animation: appear-from-top 1s 1s forwards;
+        animation: appear-from-top 1s .5s forwards;
     }
 
     h2 {
@@ -85,7 +85,7 @@
         font-size: 40px;
         margin: 0 0 2rem;
         opacity: 0;
-        animation: appear-from-bottom 1s 2s forwards;
+        animation: appear-from-bottom 1s 1.5s forwards;
 
     }
 
@@ -94,7 +94,7 @@
         image-rendering: crisp-edges;
         margin: 3rem 48.5%;
         opacity: 0;
-        animation: arrow-animation 5s 3s forwards;
+        animation: arrow-animation 5s 2.5s forwards;
     }
 
 

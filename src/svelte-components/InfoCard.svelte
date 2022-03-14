@@ -67,9 +67,9 @@
 
     #container {
         display: grid;
-        grid-template-rows: fit-content(6rem) auto;
+        grid-template-rows: auto auto;
         grid-template-columns: fit-content(25%) fit-content(75%);
-        background-color: var(--palette-color-2);
+        background-color: var(--palette-color-3);
         gap: 1rem;
         padding: 1rem;
         width: 80%;
@@ -93,13 +93,13 @@
         grid-column-start: 2;
         grid-column-end: 3;
         min-width: 100%;
-        height: fit-content;
+        height: 100%;
         overflow: hidden;
         font-family: "Secular One";
         text-align: center;
         font-size: 500%;
         margin: 0;
-        color: var(--palette-color-1);
+        color: var(--palette-color-2);
         font-weight: lighter;
     }
 
@@ -109,6 +109,7 @@
         grid-column-start: 1;
         grid-column-end: 2;
         width: 100%;
+        margin: auto;
     }
 
     #text_area {
@@ -120,7 +121,7 @@
         text-align: left;
         width: 100%;
         font-size: 2.4rem;
-        color: var(--palette-color-1);
+        color: var(--palette-color-2);
         line-height: 3.25rem;
         margin: 0;
         vertical-align: top;
