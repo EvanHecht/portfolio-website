@@ -29,7 +29,6 @@
 
 
     document.addEventListener('scroll', function(e) {
-        console.log(window.scrollY)
         if (window.scrollY > 0) {
             document.getElementById("container").style.backgroundColor = "var(--palette-color-3)"
         }
@@ -64,55 +63,64 @@
         position: fixed;
         z-index: 10;
         transition: .5s;
-        height: fit-content;
-    }
-    ul {
-        list-style-type: none;
+        height: 10%;
+        max-height: 9%;
+        min-height: 9%;
         overflow: hidden;
+    }
+
+    ul {
+        
+        list-style-type: none;
+        width: 100%;
+        height: 100%;
         text-align: right;
-        height: 4rem;
-        line-height: 4rem;
-        padding: 0.5rem 0 0.5rem 0;
-        margin: auto;
+        margin: 0;
+        padding: 0;
 
     }
+
     li {
-        display: inline-block;
+        display: inline-flex;
+        align-items: center;
+        width: fit-content;
         height: 100%;
-        padding: 0rem 1rem;
+        line-height: 100%;
         opacity: 0;
         margin: auto;
+        padding: 0 .75vw 0 1vw;
     }
 
     a {
         color: var(--palette-color-2);
         display: inline-block;
-        font-size: large;
+        font-size: 1.5vw;
         font-family: 'Rubik';
         text-decoration: none;
-        height: 100%;
-        padding: 0 1rem;
-        border-radius: 1rem;
-        border: 1rem;
+        border-radius: 3vw;
+        border: 1vw;
         transition: 0.5s;
         opacity: 1;
-
+        width: 100%;
+        line-height: 100%;
+        padding: 1vw;
     }
+
     a:hover {
         background-color: var(--palette-color-4);
         color: var(--palette-color-1);
-        transform: translateX(-1rem);
+        transform: translateX(-1vw);
     }
     
     img {
-        display: block;
-        max-height: 70%;
-        margin-top: 7.5%;
+        max-height: 3vw;
+        margin: auto;
     }
 
     #logo {
+        margin-left: 0;
         float: left;
-        padding-left: 1rem;
+        padding-left: 1vw;
         animation: appear-from-left 0.5s 0s forwards;
     }
 

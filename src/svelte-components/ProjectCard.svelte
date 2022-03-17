@@ -37,20 +37,20 @@
     #Container {
         background-color: var(--palette-color-3);
         height: fit-content;
-        max-height: 55rem;
+        max-height: 55vw;
         margin: 0;
         display: grid;
         grid-template-columns: auto;
         grid-template-rows: .25fr 2fr fit-content 1.25fr;
-        border-radius: 3rem 3rem;
+        border-radius: 3vw 3vw;
         padding: 2.5%;
-        box-shadow: 0 1.5rem 1rem;
+        box-shadow: 0 1.5vw 1vw;
         border-style: outset;
-        border-radius: 3rem;
-        border-width: .25rem;
+        border-radius: 3vw;
+        border-width: .25vw;
         border-color: var(--palette-color-4);
         animation: forwards intro_animation .5s;
-        padding-bottom: 1rem;
+        padding-bottom: 2vw;
         min-height: 100%;
     }
 
@@ -59,7 +59,7 @@
         font-family: 'Rubik';
         color: var(--palette-color-2);
         font-weight: bold;
-        font-size: 2rem;
+        font-size: 3vw;
         grid-row: 1;
         margin: auto;
     }
@@ -67,13 +67,13 @@
     #Image {
         grid-row: 2;
         grid-column: 1;
-        max-width:100%;
+        max-width: 100%;
         width: auto;
         height: auto;
         margin: auto;
         padding-bottom: 5%;
         padding-top: 5%;
-        border-radius: 3rem;
+        border-radius: 3vw;
     }
 
     #Text {
@@ -82,9 +82,9 @@
         text-align: center;
         font-family: 'Rubik';
         color: var(--palette-color-2);
-        font-size: 1.5rem;
+        font-size: 1.25vw;
         margin: auto;
-        line-height: 2rem;
+        line-height: 1.5vw;
 
     }
 
@@ -94,9 +94,9 @@
         height: 90%;
         width: 90%;
         margin: auto;
-        border-radius: 2rem;
+        border-radius: 2vw;
         background-color: var(--palette-color-4);
-        font-size: 1.5rem;
+        font-size: 1.5vw;
         font-family: 'Rubik';
         transition: .35s;
         border-style:solid;

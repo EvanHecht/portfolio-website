@@ -19,17 +19,17 @@
     h1 {
         text-align: center;
         font-family: 'Secular One';
-        font-size: 3.5rem;
+        font-size: 4vw;
         color: var(--palette-color-2);
-        text-shadow: 0.35rem 0.35rem black;
-        margin-bottom: 7rem;
+        text-shadow: 0.50vw 0.50vw black;
+        margin-bottom: 7vw;
         animation: forwards intro_animation .5s
     }
 
     #ProjectGrid {
         width: 75%;
         height: fit-content;
-        margin: 0 12.5% 50rem 12.5%;
+        margin: 0 12.5% 50vw 12.5%;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: max-content max-content max-content;

@@ -20,12 +20,10 @@
     }
 
     onMount(async () => {
-        console.log(paths_list)
         if(paths_list.length == 0) { 
             text_area.style.gridColumnStart = '1'
             header_ref.style.gridColumnStart = '1'
             text_area.style.textAlign = 'center'
-            console.log("bruh")
         }
 
         // Add images
@@ -67,23 +65,22 @@
 
     #container {
         display: grid;
-        grid-template-rows: auto auto;
+        grid-template-rows: min-content auto;
         grid-template-columns: fit-content(25%) fit-content(75%);
         background-color: var(--palette-color-3);
-        gap: 1rem;
-        padding: 1rem;
+        gap: 1vw;
+        padding: 1vw;
         width: 80%;
-        margin: 0 10% 8rem 10%;
-        border-radius: 3rem;
+        margin: 0 10% 8vw 10%;
+        border-radius: 3vw;
         opacity: 0%;
         transform: translateX(-10rem);
         transition: 0.75s;
-        box-shadow: 0 1.5rem 1rem #000000c0;
-        border-style:outset;
-        border-radius: 3rem;
-        border-width: .5rem;
+        box-shadow: 0 1.5vw 1vw #000000c0;
+        border-style: outset;
+        border-radius: 3vw;
+        border-width: .5vw;
         border-color: var(--palette-color-4);
-        font-size: 100%;
         overflow: hidden;
     }
 
@@ -93,11 +90,11 @@
         grid-column-start: 2;
         grid-column-end: 3;
         min-width: 100%;
-        height: 100%;
+        height: fit-content;
         overflow: hidden;
         font-family: "Secular One";
         text-align: center;
-        font-size: 4rem;
+        font-size: 3vw;
         margin: 0;
         color: var(--palette-color-2);
         font-weight: lighter;
@@ -113,6 +110,7 @@
     }
 
     #text_area {
+        display: inline;
         grid-row-start: 2;
         grid-row-end: 3;
         grid-column-start: 2;
@@ -120,12 +118,11 @@
         font-family: "Rubik";
         text-align: left;
         width: 100%;
-        font-size: 1.75rem;
+        font-size: 1.75vw;
         color: var(--palette-color-2);
-        line-height: 3.25rem;
         margin: 0;
         vertical-align: top;
-        line-height: 2.25rem;
+        line-height: 2vw;
     }
 
 </style>

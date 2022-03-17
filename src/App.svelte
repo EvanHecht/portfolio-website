@@ -30,5 +30,5 @@
 
 
 <NavBar bind:page={page}/>
-<div style="height: 12rem"></div>
+<div style="height: 8vh"></div>
 <svelte:component id="PageComponent" this={page}/>
