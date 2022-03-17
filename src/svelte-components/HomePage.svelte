@@ -20,7 +20,7 @@
 
 
 <TitleSequence/>
-<div style="height: 10rem"></div>
+<div style="height: 12vw"></div>
 
 <InfoCard
 image_paths="resources/images/picture_of_me.jpg"

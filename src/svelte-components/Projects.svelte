@@ -75,7 +75,7 @@
     image_path="../resources/images/octo_tower.png"
     button_text="GO TO REPO"
     button_path="https://github.com/EvanHecht/Octo-Tower"
-    project_description="A 'Rouge-Like' game I made inspired by Asteroids. Each level is randomly generated and contains randomized enemies and power-ups.
+    project_description="A 'Rogue-Like' game I made inspired by Asteroids. Each level is randomly generated and contains randomized enemies and power-ups.
     It is more of a prototype than a finished game, but I am proud with how it turned out! I made this in 2019 using GameMaker: Studio 2 and GML."/>
 
     <ProjectCard

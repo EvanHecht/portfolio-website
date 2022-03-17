@@ -42,22 +42,21 @@
 
     });
 
-    function ShouldReveal(element) {
-        const rect = element.getBoundingClientRect()
-        return (
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
-        )
-    }
-
     document.addEventListener('scroll', function(e) {
         if(ShouldReveal(container)) {
             container.style.opacity = '100%'
             container.style.transform = 'translateX(0rem)'
-        } else {
+        } else if(container !== null) {
         container.style.opacity = '0%'
         container.style.transform = 'translateX(-10rem)'
         }
     })
+
+    function ShouldReveal(element) {
+        if (element == null) return null
+    	const rect = element.getBoundingClientRect();
+    	return rect.bottom <= (window.innerHeight || document.documentElement.clientHeight);
+    }
 
 </script>
 

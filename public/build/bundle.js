@@ -539,6 +539,7 @@ var app = (function () {
     }
 
     function ShouldReveal(element) {
+    	if (element == null) return null;
     	const rect = element.getBoundingClientRect();
     	return rect.bottom <= (window.innerHeight || document.documentElement.clientHeight);
     }
@@ -584,7 +585,7 @@ var app = (function () {
     		if (ShouldReveal(container)) {
     			$$invalidate(3, container.style.opacity = '100%', container);
     			$$invalidate(3, container.style.transform = 'translateX(0rem)', container);
-    		} else {
+    		} else if (container !== null) {
     			$$invalidate(3, container.style.opacity = '0%', container);
     			$$invalidate(3, container.style.transform = 'translateX(-10rem)', container);
     		}
@@ -724,7 +725,7 @@ var app = (function () {
     			create_component(infocard2.$$.fragment);
     			t4 = space();
     			create_component(infocard3.$$.fragment);
-    			set_style(div, "height", "10rem");
+    			set_style(div, "height", "12vw");
     		},
     		m(target, anchor) {
     			mount_component(titlesequence, target, anchor);
@@ -987,7 +988,7 @@ var app = (function () {
     				image_path: "../resources/images/octo_tower.png",
     				button_text: "GO TO REPO",
     				button_path: "https://github.com/EvanHecht/Octo-Tower",
-    				project_description: "A 'Rouge-Like' game I made inspired by Asteroids. Each level is randomly generated and contains randomized enemies and power-ups.\r\n    It is more of a prototype than a finished game, but I am proud with how it turned out! I made this in 2019 using GameMaker: Studio 2 and GML."
+    				project_description: "A 'Rogue-Like' game I made inspired by Asteroids. Each level is randomly generated and contains randomized enemies and power-ups.\r\n    It is more of a prototype than a finished game, but I am proud with how it turned out! I made this in 2019 using GameMaker: Studio 2 and GML."
     			}
     		});
 
