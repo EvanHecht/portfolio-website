@@ -1016,9 +1016,9 @@ var app = (function () {
     			props: {
     				title: "RAIDER RUMBLE",
     				image_path: "../resources/images/raider_rumble_logo.png",
-    				button_text: "MSOE SENIOR THESIS SITE",
-    				button_path: "https://www.msoe.edu/academics/senior-project-showcase/",
-    				project_description: "My Senior Thesis project currently in development. It is an MSOE themed platform fighting game that we are developing and building an arcade cabinet for.\r\n    I serve as the lead gameplay programmer on a team of 4 other students. I am not allowed to share any code currently, but will once the project ends."
+    				button_text: "PLAY",
+    				button_path: "../resources/pages/raider_rumble_web/raider_rumble.html",
+    				project_description: "My Senior Thesis project for my Software Engineering degree. It is an MSOE themed platform fighter and arcade cabinet.\r\n    I served as the lead gameplay programmer on a team of 4 other students. Click the button to play in the browser!"
     			}
     		});
 

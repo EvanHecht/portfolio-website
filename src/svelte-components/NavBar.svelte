@@ -5,6 +5,7 @@
     import ProjectsPage from "./Projects.svelte"
     import ContactPage from "./Contact.svelte"
 
+
     onMount(async () => {
         document.getElementById("HomeLink").onclick = ()=> {
             window.scrollTo(0, 0)
